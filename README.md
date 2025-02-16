@@ -2,7 +2,7 @@
 
 ## Overview
 
-The Timer App is a React Native application that allows users to create, start, pause, reset, and delete multiple timers. Timers can be categorized, and users can control all timers within a category simultaneously. Completed timers trigger a modal notification and are stored in history.
+The Timer App is a React Native application that allows users to create, start, pause, reset, and delete multiple timers. Timers can be categorized, and users can control all timers within a category simultaneously. Completed timers trigger a modal and are stored in history.
 
 ## Features
 
