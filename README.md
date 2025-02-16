@@ -1,97 +1,92 @@
-This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
+# Timer App
 
-# Getting Started
+## Overview
 
-> **Note**: Make sure you have completed the [Set Up Your Environment](https://reactnative.dev/docs/set-up-your-environment) guide before proceeding.
+The Timer App is a React Native application that allows users to create, start, pause, reset, and delete multiple timers. Timers can be categorized, and users can control all timers within a category simultaneously. Completed timers trigger a modal notification and are stored in history.
 
-## Step 1: Start Metro
+## Features
 
-First, you will need to run **Metro**, the JavaScript build tool for React Native.
+- Create multiple timers with a name, duration, and category.
+- Start, pause, and reset individual timers.
+- Start, pause, and reset all timers in a specific category.
+- Timers run in real-time and decrement every second.
+- Completed timers trigger a congratulatory modal.
+- Timers are stored persistently using AsyncStorage.
+- Grouping of timers by category for better organization.
 
-To start the Metro dev server, run the following command from the root of your React Native project:
+## Tech Stack
 
-```sh
-# Using npm
-npm start
+- **React Native**: UI development.
+- **AsyncStorage**: Local storage for timers.
+- **react-native-modalize**: Bottom sheet modal for adding new timers.
+- **Context API**: Theme management.
 
-# OR using Yarn
-yarn start
+## Installation
+
+### Prerequisites
+
+Ensure you have the following installed:
+
+- Node.js
+- React Native CLI
+- Android Studio / Xcode (for emulators or real devices)
+
+### Steps
+
+1. Clone the repository:
+   ```sh
+   git clone https://github.com/yourusername/timer-app.git
+   ```
+2. Navigate into the project directory:
+   ```sh
+   cd timer-app
+   ```
+3. Install dependencies:
+   ```sh
+   npm install
+   ```
+4. Run the application:
+   - For Android:
+     ```sh
+     npx react-native run-android
+     ```
+   - For iOS:
+     ```sh
+     npx react-native run-ios
+     ```
+
+## Usage
+
+- Tap **ADD TIMER** to create a new timer.
+- Enter the **Name, Duration, and Category**, then tap **ADD TIMER**.
+- Start, pause, reset, or delete a timer using the buttons provided.
+- Control all timers in a category with **START ALL, PAUSE ALL, and RESET ALL** buttons.
+- A modal appears when a timer completes.
+
+## Project Structure
+
+```
+├── src
+│   ├── components    # Reusable UI components (Progress, Header, Divider)
+│   ├── screens       # Main screens (HomeScreen, HistoryScreen)
+│   ├── theme        # Theme Context for dark/light mode
+│   ├── constants     # App-wide constants
+│   ├── styles        # Styling files
+│   ├── utils         # Helper functions
+│   ├── App.js        # Main App entry point
+│   └── index.js      # React Native entry point
 ```
 
-## Step 2: Build and run your app
+## Future Enhancements
 
-With Metro running, open a new terminal window/pane from the root of your React Native project, and use one of the following commands to build and run your Android or iOS app:
+- Background timer execution when the app is closed.
+- Push notifications for completed timers.
+- More customization options for timers (e.g., sound alerts, different time formats).
 
-### Android
+## Contributing
 
-```sh
-# Using npm
-npm run android
+Feel free to submit issues or pull requests to improve the project!
 
-# OR using Yarn
-yarn android
-```
+## License
 
-### iOS
-
-For iOS, remember to install CocoaPods dependencies (this only needs to be run on first clone or after updating native deps).
-
-The first time you create a new project, run the Ruby bundler to install CocoaPods itself:
-
-```sh
-bundle install
-```
-
-Then, and every time you update your native dependencies, run:
-
-```sh
-bundle exec pod install
-```
-
-For more information, please visit [CocoaPods Getting Started guide](https://guides.cocoapods.org/using/getting-started.html).
-
-```sh
-# Using npm
-npm run ios
-
-# OR using Yarn
-yarn ios
-```
-
-If everything is set up correctly, you should see your new app running in the Android Emulator, iOS Simulator, or your connected device.
-
-This is one way to run your app — you can also build it directly from Android Studio or Xcode.
-
-## Step 3: Modify your app
-
-Now that you have successfully run the app, let's make changes!
-
-Open `App.tsx` in your text editor of choice and make some changes. When you save, your app will automatically update and reflect these changes — this is powered by [Fast Refresh](https://reactnative.dev/docs/fast-refresh).
-
-When you want to forcefully reload, for example to reset the state of your app, you can perform a full reload:
-
-- **Android**: Press the <kbd>R</kbd> key twice or select **"Reload"** from the **Dev Menu**, accessed via <kbd>Ctrl</kbd> + <kbd>M</kbd> (Windows/Linux) or <kbd>Cmd ⌘</kbd> + <kbd>M</kbd> (macOS).
-- **iOS**: Press <kbd>R</kbd> in iOS Simulator.
-
-## Congratulations! :tada:
-
-You've successfully run and modified your React Native App. :partying_face:
-
-### Now what?
-
-- If you want to add this new React Native code to an existing application, check out the [Integration guide](https://reactnative.dev/docs/integration-with-existing-apps).
-- If you're curious to learn more about React Native, check out the [docs](https://reactnative.dev/docs/getting-started).
-
-# Troubleshooting
-
-If you're having issues getting the above steps to work, see the [Troubleshooting](https://reactnative.dev/docs/troubleshooting) page.
-
-# Learn More
-
-To learn more about React Native, take a look at the following resources:
-
-- [React Native Website](https://reactnative.dev) - learn more about React Native.
-- [Getting Started](https://reactnative.dev/docs/environment-setup) - an **overview** of React Native and how setup your environment.
-- [Learn the Basics](https://reactnative.dev/docs/getting-started) - a **guided tour** of the React Native **basics**.
-- [Blog](https://reactnative.dev/blog) - read the latest official React Native **Blog** posts.
-- [`@facebook/react-native`](https://github.com/facebook/react-native) - the Open Source; GitHub **repository** for React Native.
+This project is licensed under the MIT License.
